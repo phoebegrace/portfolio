@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll; /* Ensures the page is scrollable */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff; /* Example background to distinguish the header */
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    padding: 0 20px; /* Adds margin-like space on the sides */
+    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+    height: 80px; /* Set a fixed height for the header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow below the header */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* This centers the nav items vertically */
+    height: 100%; /* Fill the height of the header */
+    margin-right: auto; /* Pushes nav to the left, making space for icons on the right */
+}
+
+nav a {
+    text-decoration: none;
+    color: #00000090;
+    font-size: 1.2em;
+    margin-left: 20px; /* Adds spacing between nav items */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+}
+
+.intro {
+    /* Make sure the intro takes up at least the full viewport height */
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 20px; /* Top padding to account for fixed header */
+    box-sizing: border-box;
+    margin-top: 250px;
+}
+
+.intro-text {
+    max-width: 50%;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #403f3f;
+}
+
+.intro-text h2 {
+    padding-top: 100px;
+    font-size: 1.5em;
+    margin: 0;
+    color: #5e5e5e;
+}
+
+.intro-text p {
+    font-size: 1em;
+    color: #5d5a5a;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.buttons button:first-child {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.buttons button:last-child {
+    background-color: #e0e0e0;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+}
+
+/* ... Previous CSS ... */
+
+.download-button, .buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* To hide the pseudo-element */
+}
+
+.download-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.buttons button:last-child {
+    background-color: #e0e0e0;
+}
+
+/* Modern hover effect for both buttons */
+.download-button:hover, .buttons button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+/* Pseudo-element for a more dynamic effect */
+.download-button::after, .buttons button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+.download-button:hover::after, .buttons button:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* ... Previous CSS ... */
+
+.contact-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #d0d0d0; /* Slightly darker on hover */
+}
+
+.contact-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+.contact-button:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply fade-in animation to the container */
+.container {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 1300px;
+    max-width: 1300px;
+    height: 600px;
+    position: relative;
+    overflow-y: visible;
+    animation: fadeIn 1s ease-out; /* Fade in animation */
+}
+
+/* Apply floating animation to the logo */
+.logo img {
+    width: 50px;
+    height: auto;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+/* ... Previous CSS ... */
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: visible;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-color: #463f3fc7;
+    border-radius: 10px;
+    padding: 20px; /* Adjusted from -30px to 20px for proper spacing */
+    transition: all 0.5s ease;
+    left: calc(50% - 150px); /* Adjusted to center the items considering padding */
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+
+.item img {
+    width: auto;
+    height: 250px;
+    margin-bottom: 10px;
+    
+}
+
+.item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.item h2 {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+}
+.item h3 {
+    font-size: 1.0em;
+    color: #ffffff;
+    font-style: italic;
+    text-align: left;
+    font-weight: lighter;
+}
+.item p {
+    font-size: 1.em;
+    color: #ffffff6d;
+    margin: 10px 0 0;
+    text-align: left;
+    margin-top: -50px;
+}
+
+#next, #prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff; /* Changed to white for better visibility against the dark background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border: none;
+    font-size: xx-large;
+    font-weight: bold;
+    cursor: pointer; /* Add cursor style to indicate clickable area */
+    padding: 10px 20px; /* Add padding for better touch area */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 2; /* Ensure buttons are above the slider items */
+}
+
+#prev {
+    left: -500px; /* Position on the left side of the slider */
+}
+
+#next {
+    right: -500px; /* Position on the right side of the slider */
+}
+
+/* Hover effect for buttons */
+#next:hover, #prev:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+.experience-section h1{
+    font-size: 2.5em;
+    left: -500px;
+    padding-bottom: 50px;
+}
