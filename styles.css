@@ -308,11 +308,11 @@ nav a {
     font-weight: lighter;
 }
 .item p {
-    font-size: 1.em;
+    font-size: 1.5em;
     color: #ffffff6d;
     margin: 10px 0 0;
     text-align: left;
-    margin-top: -50px;
+    margin-top: -10px;
 }
 
 #next, #prev {
