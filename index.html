@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Phoebe Juayong</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -47,13 +49,14 @@
 
     <div id="experience" class="experience-section">
         <h1>Experience</h1>
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1000">
         <div class="slider">
             <div class="item">
                 <div class="front">
-                    <h2>Technical staff</h2>
-                    <img src="assets/avp_logo.png" alt="Experience Logo">
-                    <h3>Creative Content Creator</h3>
-                    <p>March 2024 - Present</p>
+                    <h2>Angat Buhay Hamtic</h2>
+                    <img src="assets/angat buhay.jpg" alt="Experience Logo">
+                    <h3>Technical Staff (Volunteer)</h3>
+                    <p>March - May 2022</p>
                 </div>
             </div>
             <div class="item">
@@ -67,15 +70,33 @@
             <div class="item">
                 <div class="front">
                     <h2>Ang Pagbutlak Publication</h2>
-                    <img src="assets/avp_logo.png" alt="Experience Logo">
+                    <img src="assets/gjfpns.png" alt="Experience Logo">
                     <h3>Publication Staff</h3>
-                    <p>March 2024 - Present</p>
+                    <p>July 2015 - April 2021</p>
                 </div>
             </div>
             <button id="next">></button>
             <button id="prev"><</button>
         </div>
     </div>
+</div>
+
+<div id="projects" class="projects-section">
+    <h1>Projects</h1>
+    <div class="project-items">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Sparkart</h2>
+            <a href="https://pebicart.vercel.app/community.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/sparkart.png" alt="Project 1 Screenshot" class="project-image">
+            </a>
+            <p>"This is a personal project as someone who loves to collect photocards. As of now, it functions as a display for kpop collectibles where users can search for the PCs they are looking for. I have a lot of plans for this website, such as selling and trading collectibles.</p>
+        </div>
+        <!-- Add more project items as needed -->
+    </div>
+</div>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

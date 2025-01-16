@@ -83,3 +83,9 @@ prev.onclick = function() {
 };
 
 window.onload = loadShow;
+
+
+AOS.init({
+    // global settings here
+    duration: 1000,
+});
